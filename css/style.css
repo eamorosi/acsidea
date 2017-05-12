@@ -19,30 +19,24 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-#profilepic { 
-  position: relative;
-
-}
-
 #profilepic img {
-	position: absolute;
-    top: 20px;
-    left: 50px;
+    position: initial;
+    margin: 40px 40px;
     display: block;
+    padding: 0;
 }
 
 .profilename {
-	position: relative;
+	position: initial;
 	display: block;
 	font: inherit;
-	text-align: center;
-  	color: white
-}
-
-#checkboxes {
-    position: absolute;
-    top: 350px;
-    left: 150px;
+	text-align: left;
+	margin: 10px 150px;
+  	font-size: 18px;
+  	font-weight: 500;
+  	color: white;
+  	color: rgba(255, 255, 255, 0.95);
+  	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 }
 
 article, aside, details, figcaption, figure,
@@ -139,39 +133,7 @@ h3, label {
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 } 
 
-.register-title {
-  width: 270px;
-  line-height: 43px;
-  margin: 50px auto 20px;
-  font-size: 19px;
-  font-weight: 500;
-  color: white;
-  color: rgba(255, 255, 255, 0.95);
-  text-align: center;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  background: #d7604b;
-  border-radius: 3px;
-  background-image: -webkit-linear-gradient(top, #dc745e, #d45742);
-  background-image: -moz-linear-gradient(top, #dc745e, #d45742);
-  background-image: -o-linear-gradient(top, #dc745e, #d45742);
-  background-image: linear-gradient(to bottom, #dc745e, #d45742);
-  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-}
 
-.subtitle {
-  width: 270px;
-  line-height: 43px;
-  margin: 50px auto 20px;
-  font-size: 19px;
-  font-weight: 500;
-  color: white;
-  color: rgba(255, 255, 255, 0.95);
-  text-align: center;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  background: #d1d347;
-  border-radius: 3px;
-}
 
 .register {
   margin: 0 auto;
@@ -310,6 +272,22 @@ input {
   padding: 0;
 }
 
+#checkboxes {
+    position: relative;
+    top: 50px;
+    left: 125px;
+}
+
+.checkarea {
+  margin: 150px 100px;
+  width: 230px;
+  height: 150px;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
 
 input[type=checkbox] { display:none; } /* to hide the checkbox itself */
 
@@ -329,9 +307,66 @@ input[type=checkbox] + label:before {
 
 input[type=checkbox]:checked + label:before {
     content:"\2714"; /* Tick */
-    color:white;
+    color:black;
     background-color: #666; 
     text-align:center;
     line-height:15px;
     text-shadow:0px 0px 3px #eee;
 }
+
+div.tab {
+	position: absolute;
+    top: 20px;
+    left: 500px;
+    font: inherit;
+      font-size: 19px;
+  font-weight: 250;
+  color: white;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+      background: #fcfcfc;
+  border: 1px solid;
+  border-color: #d8d8d8 #d1d1d1 #c3c3c3;
+  border-radius: 2px;
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: -moz-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: -o-linear-gradient(top, #fefefe, #eeeeee);
+  background-image: linear-gradient(to bottom, #fefefe, #eeeeee);
+  -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04);
+  box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04);
+}
+
+div.tab button {
+	font: inherit;
+    background-color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+div.tab button.active {
+    background-color: #ccc;
+}
+
+
+.tabcontent {
+	position: absolute;
+	font: inherit;
+    top: 50px;
+    left: 500px;
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
